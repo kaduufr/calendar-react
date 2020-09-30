@@ -1,38 +1,69 @@
 .App {
-  text-align: center;
+  background: linear-gradient(to bottom, #fc354c, #0abfbc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.calendar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 8px 16px;
+  z-index: 2;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.teste {
+  width: 14.2%;
+  height: 200px;
+  padding: 16px;
+  border: 0.2px solid #f1f1f2;
+}
+
+@media screen and (max-width: 600px) {
+  .teste {
+    width: 33%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+
+
+h1.info {
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 36px;
+}
+
+.teste a {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.floatingButton {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 60px;
+  min-height: 60px;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  border-radius: 50%;
+  background-color: #df6565;
+  color: #f1f1f2;
+  text-align: center;
+  border: none;
+  font-size: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.floatingButton::before {
+  content: '+';
+}
+
+.floatingButton:hover {
+  opacity: 0.97;
+  transition: 0.4s;
+}
+
+.floatingButton:focus {
+  outline: none;
 }
